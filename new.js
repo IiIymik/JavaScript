@@ -50,25 +50,25 @@
 // makeArray(['Манго', 'Поли'], ['Аякс', 'Челси'], 3);
 // makeArray(['Манго', 'Поли', 'Хьюстон'], ['Аякс', 'Челси'], 4);
 // console.log("hello");
-// const ex4 = [2, 3, 1];
+const ex4 = [2, 3, 1, 21, 35];
 
-// function bubbleSort(arr) {
-//   for (let i = 0; i < arr.length; i++) {
-//     // console.log("1", arr[i]);
-//     for (let j = 0; j < arr.length; j++) {
-//       // console.log("2", arr[j]);
-//       if (arr[j] > arr[j + 1]) {
-//         let tmp = arr[j];
-//         arr[j] = arr[j + 1];
-//         arr[j + 1] = tmp;
-//       }
-//     }
-//   }
+function bubbleSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    // console.log("1", arr[i]);
+    for (let j = 0; j < arr.length; j++) {
+      // console.log("2", arr[j]);
+      if (arr[j] > arr[j + 1]) {
+        let tmp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = tmp;
+      }
+    }
+  }
 
-//   return arr;
-// }
+  return arr;
+}
 
-// console.log(bubbleSort(ex4));
+console.log(bubbleSort(ex4));
 
 
 // function calculateTotal(number) {
@@ -165,20 +165,20 @@
 
 // console.log(getCommonElements([1, 2, 3], [2, 4]));
 
-function getEvenNumbers(start, end) {
-  // Пиши код ниже этой строки
-  let total = [];
+// function getEvenNumbers(start, end) {
+//   // Пиши код ниже этой строки
+//   let total = [];
   
-  for (let i = start; i <= end; i++) {
-    // console.log(i);
-    if (i % 2 === 0) {
-      // console.log(i);
-      total.push(i);
-    }
-  }
+//   for (let i = start; i <= end; i++) {
+//     // console.log(i);
+//     if (i % 5 === 0) {
+//       console.log(i);
+//       total.push(i);
+//     }
+//   }
 
-  return total;
-    // Пиши код выше этой строки
-}
+//   return total;
+//     // Пиши код выше этой строки
+// }
   
-console.log(getEvenNumbers(2, 5));
+// console.log(getEvenNumbers(1, 10));
