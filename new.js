@@ -257,3 +257,36 @@ function bubbleSort(arr) {
 
 // console.log(hexColors);
 // console.log(rgbColors);
+const products = [
+  { name: 'Радар', price: 1300, quantity: 4 },
+  { name: 'Сканер', price: 2700, quantity: 3 },
+  { name: 'Дроид', price: 400, quantity: 7 },
+  { name: 'Захват', price: 1200, quantity: 9 },
+];
+
+// console.log(roduct);
+function getProductPrice(productName) {
+  // Пиши код ниже этой строки
+  let total = 0;
+  for (let product of products ){
+    console.log(product);
+    if (productName === product.name) {
+      // console.log(total.name);
+       return total= product.price;
+      
+    }
+    return total;
+    
+  }
+  // Пиши код выше этой строки
+}
+
+console.log(getProductPrice('Радар'));
+console.log(getProductPrice('Сканер'));
+console.log(getProductPrice('Дроид'));
+console.log(getProductPrice('Захват'));
+
+getProductPrice('Сканер');
+getProductPrice('Радар');
+getProductPrice('Дроид');
+getProductPrice('Захват');
