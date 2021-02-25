@@ -68,7 +68,7 @@ function bubbleSort(arr) {
   return arr;
 }
 
-console.log(bubbleSort(ex4));
+// console.log(bubbleSort(ex4));
 
 
 // function calculateTotal(number) {
@@ -182,3 +182,78 @@ console.log(bubbleSort(ex4));
 // }
   
 // console.log(getEvenNumbers(1, 10));
+
+
+// const apartment = {
+//   descr: 'Просторная квартира в центре',
+//   rating: 4,
+//   price: 2153,
+// };
+// const keys = [];
+// const values = [];
+// // Пиши код ниже этой строки
+// for (let key in apartment) {
+//   key = keys.push(key);
+// }
+// for (let value in apartment) {
+//   value = values.push(apartment[value]);
+// }
+
+// console.table(keys);
+// console.table(values);
+
+// function countProps(object) {
+//   let propCount = 0;
+//   // Пиши код ниже этой строки
+//   for (let key in object) {
+//     // console.log(key);
+    
+//   if (object.hasOwnProperty(key)) {
+//     propCount += 1;
+//     // console.log(key);
+    
+//   }
+// }
+//   // Пиши код выше этой строки
+//   return propCount;
+// }
+
+// countProps({});
+// countProps({ name: 'Mango', age: 2 });
+// console.log(countProps({}));
+// console.log(countProps({ name: 'Mango', age: 2 }));
+// console.log(countProps({ mail: 'poly@mail.com', isOnline: true, score: 500 }));
+
+// const apartment = {
+//   descr: 'Просторная квартира в центре',
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// // Пиши код ниже этой строки
+// const keys = Object.keys(apartment);
+// console.log(keys);
+// for (let key of keys) {
+//   key = values.push(apartment[key]);
+// console.log(keys);
+// }
+
+// // console.log(values);
+
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // Пиши код ниже этой строки
+// for (let color of colors) {
+//   hexColors.push(color.hex);
+// rgbColors.push(color.rgb);
+// }
+
+// console.log(hexColors);
+// console.log(rgbColors);
