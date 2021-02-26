@@ -257,36 +257,99 @@ function bubbleSort(arr) {
 
 // console.log(hexColors);
 // console.log(rgbColors);
-const products = [
-  { name: 'Радар', price: 1300, quantity: 4 },
-  { name: 'Сканер', price: 2700, quantity: 3 },
-  { name: 'Дроид', price: 400, quantity: 7 },
-  { name: 'Захват', price: 1200, quantity: 9 },
-];
+// const products = [
+//   { name: 'Радар', price: 1300, quantity: 4 },
+//   { name: 'Сканер', price: 2700, quantity: 3 },
+//   { name: 'Дроид', price: 400, quantity: 7 },
+//   { name: 'Захват', price: 1200, quantity: 9 },
+// ];
+
+// // console.log(roduct);
+// function getProductPrice(productName) {
+//   // Пиши код ниже этой строки
+
+//   for (const product of products ){
+//     // console.log(product);
+//     if (productName === product.name) {
+//       // console.log(total.name);
+//        return  product.price * product.quantity;
+//     }
+//   }
+//   return 0;
+//   // Пиши код выше этой строки
+// }
+
+// console.log(getProductPrice('Радар'));
+// console.log(getProductPrice('Сканер'));
+// console.log(getProductPrice('Дроид'));
+// console.log(getProductPrice('Захват'));
+
+// const products = [
+//   { name: 'Радар', price: 1300, quantity: 4 },
+//   { name: 'Сканер', price: 2700, quantity: 3 },
+//   { name: 'Дроид', price: 400, quantity: 7 },
+//   { name: 'Захват', price: 1200, quantity: 9 },
+// ];
 
 // console.log(roduct);
-function getProductPrice(productName) {
-  // Пиши код ниже этой строки
-  let total = 0;
-  for (let product of products ){
-    console.log(product);
-    if (productName === product.name) {
-      // console.log(total.name);
-       return total= product.price;
-      
-    }
-    return total;
-    
-  }
-  // Пиши код выше этой строки
-}
+// function getProductPrice(productName) {
+//   // Пиши код ниже этой строки
+//   const valuesName = [];
+//   for (const product of products ){
+//     // console.log(product);
+//     for (const key in product) {
+//       if (productName === key) {
+//         // console.log(total.name);
+//         valuesName.push(product[key]);
+//       }
+//     }
+//   }
+//   return valuesName;
+//   // Пиши код выше этой строки
+// }
 
-console.log(getProductPrice('Радар'));
-console.log(getProductPrice('Сканер'));
-console.log(getProductPrice('Дроид'));
-console.log(getProductPrice('Захват'));
+// console.log(getProductPrice('name'));
+// console.log(getProductPrice('price'));
+// console.log(getProductPrice('quantity'));
+// console.log(getProductPrice('Захват'));
 
-getProductPrice('Сканер');
-getProductPrice('Радар');
-getProductPrice('Дроид');
-getProductPrice('Захват');
+// function makeTask(data) {
+//   const completed = false;
+//   const category = 'Общее';
+//   const priority = 'Обычный';
+//   // Пиши код ниже этой строки
+// let newObj= {category,priority, ...data, completed};
+//   // Пиши код выше этой строки
+//   return newObj;
+// }
+
+// console.log(makeTask({}));
+
+// Пиши код ниже этой строки
+// function add(...args) {
+//   // console.log((args));
+//   let total = 0;
+//   for (const arg of args) {
+//     total += arg;
+//   }
+//   return total;
+//   // Пиши код выше этой строки
+// }
+// console.log(add(15, 27));
+
+// function addOverNum(values, ...args) {
+//   let total = 0;
+//   const value = values;
+//   // console.log(value);
+//   for (let arg of args) {
+//     if(value <= arg){
+//     total += arg;
+//     }
+//   }
+
+//   return total;
+//   // Пиши код выше этой строки
+// }
+// console.log(addOverNum(50, 15, 27));
+// console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
+// console.log(addOverNum(20, 74, 11, 62, 46, 12, 36));
