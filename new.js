@@ -353,3 +353,199 @@ function bubbleSort(arr) {
 // console.log(addOverNum(50, 15, 27));
 // console.log(addOverNum(10, 12, 4, 11, 48, 10, 8));
 // console.log(addOverNum(20, 74, 11, 62, 46, 12, 36));
+// Пиши код ниже этой строки
+// function findMatches(array, ...args) {
+//   const matches = []; // Не изменяй эту строку
+//   for (const number of args) {
+//     if (array.includes(number)) {
+//       matches.push(number);
+//     }
+//   }
+//   // Пиши код выше этой строки
+//   return matches;
+// }
+// console.log(findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7));
+// const bookShelf = {
+//   books: ['Последнее королевство', 'Мгла', 'Страж снов'],
+//   updateBook(oldName, newName) {
+//     // Пиши код ниже этой строки
+//     const delBook = this.books.indexOf(oldName);
+// 	this.books.splice(delBook,1,newName);
+//     console.log(this.books);
+	
+//     // Пиши код выше этой строки
+//   },
+// };
+// console.log(bookShelf.updateBook('Последнее королевство', 'Дюна')); 
+const atTheOldToad = {
+  potions: [
+    { name: 'Зелье скорости', price: 460 },
+    { name: 'Дыхание дракона', price: 780 },
+    { name: 'Каменная кожа', price: 520 },
+  ],
+  // Пиши код ниже этой строки
+  getPotions() {
+    
+    return this.potions;
+    
+  },
+  addPotion(potionName) {
+    // console.log(potionName);
+    for (const potion of this.potions) {
+      if (potion === potionName) {
+      return `Зелье ${potionName} уже есть в инвентаре!`;
+    }
+    }
+    // if (this.potions.includes(potionName)) {
+    //   return `Зелье ${potionName} уже есть в инвентаре!`;
+    // }
+
+    this.potions.push(potionName);
+  },
+  removePotion(potionName) {
+    const potionIndex = this.potions.indexOf(potionName);
+
+    if (potionIndex === -1) {
+      return `Зелья ${potionName} нет в инвентаре!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+  updatePotionName(oldName, newName) {
+    const potionIndex = this.potions.indexOf(oldName);
+
+    if (potionIndex === -1) {
+      return `Зелья ${oldName} нет в инвентаре!`;
+    }
+
+    this.potions.splice(potionIndex, 1, newName);
+  },
+  // Пиши код выше этой строки
+};
+
+
+console.log(atTheOldToad.getPotions());
+console.log(atTheOldToad.addPotion({ name: 'Каменная кожа', price: 520 }));
+
+// 7) Напиши скрипт управления личным
+// кабинетом интернет банка.
+// Есть объект account в котором необходимо
+// реализовать методы для работы
+// с балансом и историей транзакций.
+
+/*
+ * Типов транзацкий всего два.
+ * Можно положить либо снять деньги со счета.
+ */
+const Transaction = {
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw"
+};
+
+/*
+ * Каждая транзакция это объект со свойствами: id, type и amount
+ */
+
+const account = {
+  // Текущий баланс счета
+  balance: 0,
+
+  // История транзакций
+  transactions: [],
+
+  /*
+   * Метод создает и возвращает объект транзакции.
+   * Принимает сумму и тип транзакции.
+   */
+  createTransaction(type, amount) {
+    return {
+      type,
+      amount
+    };
+  },
+
+  /*
+   * Метод отвечающий за добавление суммы к балансу.
+   * Принимает сумму транзакции.
+   * Вызывает createTransaction для создания объекта
+   * транзакции
+   * после чего добавляет его в историю транзакций
+   */
+  deposit(amount) {
+    this.balance += amount;
+    const transactionType = this.createTransaction(Transaction.DEPOSIT, amount);
+    this.transactions.push(transactionType);
+  },
+
+  /*
+   * Метод отвечающий за снятие суммы с баланса.
+   * Принимает сумму танзакции.
+   * Вызывает createTransaction для создания объекта
+   * транзакции
+   * после чего добавляет его в историю транзакций.
+   *
+   * Если amount больше чем текущий баланс, выводи
+   * сообщение
+   * о том, что снятие такой суммы не возможно,
+   *  недостаточно средств.
+   */
+  withdraw(amount) {
+    if (amount > this.balance) {
+      return "Снятие такой суммы не возможно, недостаточно средств";
+    } else {
+      this.balance -= amount;
+      const transactionType = this.createTransaction(
+        Transaction.WITHDRAW,
+        amount
+      );
+      this.transactions.push(transactionType);
+    }
+  },
+
+  /*
+   * Метод возвращает текущий баланс
+   */
+  getBalance() {
+    return this.balance;
+  },
+
+  /*
+   * Метод ищет и возвращает объект транзации по id
+   */
+  getTransactionDetails(id) {
+    for (const [index, transaction] of this.transactions.entries()) {
+      if (index === id) {
+        return transaction;
+      }
+    }
+    // for (let i = 0; i < this.transactions.length; i++) {
+    //   if (i === id) {
+    //     return transaction[i];
+    //   }
+    // }
+  },
+
+  /*
+   * Метод возвращает количество средств
+   * определенного типа транзакции из всей истории
+   * транзакций
+   */
+  getTransactionTotal(type) {
+    let sum = 0;
+    for (transaction of this.transactions) {
+      if (transaction["type"] === type) {
+        sum += transaction["amount"];
+      }
+    }
+
+    return sum;
+  }
+};
+
+account.deposit(1000);
+account.deposit(2000);
+account.withdraw(500);
+
+console.log(account.getTransactionTotal(Transaction.DEPOSIT));
+
+console.log({ balance: account.balance, transactions: account.transactions });
