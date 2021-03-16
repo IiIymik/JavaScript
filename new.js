@@ -3,7 +3,7 @@
 
 // function calculateEngravingPrice(message, pricePerWord) {
 //   // Пиши код ниже этой строки
-    
+
 //     let howManyWords = message.split(' ');
 //     return console.log( howManyWords.length * pricePerWord);
 
@@ -18,7 +18,7 @@
 
 // function slugify(title) {
 //   // Пиши код ниже этой строки
- 
+
 //   let slag = title.toLowerCase().split(' ').join('-');
 //   return console.log(slag);
 
@@ -46,7 +46,7 @@
 //     return console.log(newArray);
 //     // Пиши код выше этой строки
 // }
-  
+
 // makeArray(['Манго', 'Поли'], ['Аякс', 'Челси'], 3);
 // makeArray(['Манго', 'Поли', 'Хьюстон'], ['Аякс', 'Челси'], 4);
 // console.log("hello");
@@ -91,7 +91,7 @@ function bubbleSort(arr) {
 //    }
 //    return sum;
 // }
-   
+
 // console.log(calculateTotal(1));
 // console.log(calculateTotal(3));
 
@@ -116,7 +116,7 @@ function bubbleSort(arr) {
 //     if (text.length > longest.length)
 //       longest = text
 //   }
-  
+
 //   return longest;
 //   // Пиши код выше этой строки
 // }
@@ -142,16 +142,16 @@ function bubbleSort(arr) {
 //   // Пиши код ниже этой строки
 //       const newArray = [];
 
-  // for (const number of numbers) {
-  //   if (number >= value) {
-  //      newArray.push(number);
-  //   }
-  //   // Пиши код выше этой строки
-  // }
+// for (const number of numbers) {
+//   if (number >= value) {
+//      newArray.push(number);
+//   }
+//   // Пиши код выше этой строки
+// }
 //    return newArray;
 // }
 //   console.log(filterArray([1, 2, 3, 4, 5], 3));
-  
+
 
 // function getCommonElements(array1, array2) {
 //   // Пиши код ниже этой строки
@@ -159,7 +159,7 @@ function bubbleSort(arr) {
 //   if (array1.includes(array2)) {
 //     allArray.push(array1);
 //   }
-  
+
 //   // Пиши код выше этой строки
 // }
 
@@ -168,7 +168,7 @@ function bubbleSort(arr) {
 // function getEvenNumbers(start, end) {
 //   // Пиши код ниже этой строки
 //   let total = [];
-  
+
 //   for (let i = start; i <= end; i++) {
 //     // console.log(i);
 //     if (i % 5 === 0) {
@@ -180,7 +180,7 @@ function bubbleSort(arr) {
 //   return total;
 //     // Пиши код выше этой строки
 // }
-  
+
 // console.log(getEvenNumbers(1, 10));
 
 
@@ -207,11 +207,11 @@ function bubbleSort(arr) {
 //   // Пиши код ниже этой строки
 //   for (let key in object) {
 //     // console.log(key);
-    
+
 //   if (object.hasOwnProperty(key)) {
 //     propCount += 1;
 //     // console.log(key);
-    
+
 //   }
 // }
 //   // Пиши код выше этой строки
@@ -372,7 +372,7 @@ function bubbleSort(arr) {
 //     const delBook = this.books.indexOf(oldName);
 // 	this.books.splice(delBook,1,newName);
 //     console.log(this.books);
-	
+
 //     // Пиши код выше этой строки
 //   },
 // };
@@ -385,9 +385,9 @@ function bubbleSort(arr) {
 //   ],
 //   // Пиши код ниже этой строки
 //   getPotions() {
-    
+
 //     return this.potions;
-    
+
 //   },
 //   addPotion(potionName) {
 //     // console.log(potionName);
@@ -556,7 +556,7 @@ const account = {
 //     { name: 'Дыхание дракона', price: 780 },
 //     { name: 'Каменная кожа', price: 520 },
 //   ],
-  // Пиши код ниже этой строки
+// Пиши код ниже этой строки
 //   getPotions() {
 //     return this.potions;
 //   },
@@ -571,13 +571,13 @@ const account = {
 //         potions.splice(i, 1);
 //       }
 //     }
-    
+
 //   },
 //   updatePotionName(oldName, newName) {
 //     for (const potion of this.potions) {
 //       console.log(potion);
 //       if (oldName === potion.name) {
-       
+
 //         return potion.name = newName;
 //       }
 //     }
@@ -596,7 +596,7 @@ const pizzaPalace = {
       }
     }
     return onError(`В ассортименте нет пиццы с названием ${pizzaName}.`);
-   },
+  },
 };
 // Пиши код выше этой строки
 
@@ -631,22 +631,71 @@ const service = {
 };
 
 function logAndInvokeAction(email, action) {
-  console.log(`Выполняем действие с ${email}.`);
+  // console.log(`Выполняем действие с ${email}.`);
   return action(email);
 }
 
 const firstInvoke = logAndInvokeAction('kiwi@mail.uk', service.subscribe.bind(service));
-console.log(firstInvoke);
+// console.log(firstInvoke);
 // Почта kiwi@mail.uk добавлена в рассылку.
 
-console.log(service.mailingList);
+// console.log(service.mailingList);
 /* ['mango@mail.com', 
     'poly@hotmail.de', 
     'ajax@jmail.net', 
     'kiwi@mail.uk']*/
 const secondInvoke = logAndInvokeAction('poly@hotmail.de', service.unsubscribe.bind(service));
-console.log(secondInvoke);
+// console.log(secondInvoke);
 // Почта poly@hotmail.de удалена из рассылки.
 
-console.log(service.mailingList); // ['mango@mail.com', 'ajax@jmail.net', 'kiwi@mail.uk']
+// console.log(service.mailingList); // ['mango@mail.com', 'ajax@jmail.net', 'kiwi@mail.uk']
 
+function StringBuilder(baseValue) {
+this.value = baseValue;
+};
+
+StringBuilder.prototype.getValue = function () {
+  // console.log(this.value);
+  return this.value;
+};
+StringBuilder.prototype.padEnd= function (str) {
+return  this.value =`${this.value}${str}`;
+};
+StringBuilder.prototype.padStart = function (str) {
+ return this.value =`${str}${this.value}`;
+// return this.value.unshift(str);
+};
+StringBuilder.prototype.padBoth= function (str) {
+return this.value =`${str}${this.value}${str}`;
+  
+};
+
+
+// // Пиши код выше этой строки
+// const builder = new StringBuilder('.');
+// console.log(builder.getValue()); // '.'
+// builder.padStart('^');
+// console.log(builder.getValue()); // '^.'
+// builder.padEnd('^');
+// console.log(builder.getValue()); // '^.^'
+// builder.padBoth('=');
+// console.log(builder.getValue()); // '=^.^='
+
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+  // Пиши код ниже этой строки
+  orderedItems.forEach(function callback(element, index, array) {
+  // Тело коллбек-функции
+  });
+  numbers.forEach(function (number, index) {
+  console.log(`Индекс ${index}, значение ${number}`);
+});
+  for (let i = 0; i < orderedItems.length; i += 1) {
+    totalPrice += orderedItems[i];
+  }
+  
+  // Пиши код выше этой строки
+  return totalPrice;
+}
+calculateTotalPrice([12, 85, 37, 4])
+console.log(calculateTotalPrice([12, 85, 37, 4]));
