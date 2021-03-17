@@ -732,5 +732,24 @@ function getCommonElements(firstArray, secondArray) {
     return commonElements;
     // Пиши код выше этой строки
 }
-getCommonElements([1, 2, 3], [2, 4])
-console.log(getCommonElements([1, 2, 3], [2, 4]));
+// getCommonElements([1, 2, 3], [2, 4])
+// console.log(getCommonElements([1, 2, 3], [2, 4]));
+function changeEven(numbers, value) {
+    // Пиши код ниже этой строки
+  const numberEven = [];
+    for (let i = 0; i < numbers.length; i += 1) {
+      if (numbers[i] % 2 === 0) {
+        numberEven.push(numbers[i] + value);
+      } else if (numbers) {
+        numberEven.push(numbers[i])
+      }
+  }
+  return numberEven;
+    // Пиши код выше этой строки
+}
+// changeEven([1, 2, 3, 4, 5], 10)
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+const planets = ['Земля', 'Марс', 'Венера', 'Юпитер'];
+// Пиши код ниже этой строки
+const planetsLengths = planets.map(planet => planet.length);
+console.log(planetsLengths);
