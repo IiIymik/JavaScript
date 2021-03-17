@@ -681,21 +681,56 @@ return this.value =`${str}${this.value}${str}`;
 // builder.padBoth('=');
 // console.log(builder.getValue()); // '=^.^='
 
-function calculateTotalPrice(orderedItems) {
-  let totalPrice = 0;
-  // Пиши код ниже этой строки
-  orderedItems.forEach(function callback(element, index, array) {
-  // Тело коллбек-функции
-  });
-  numbers.forEach(function (number, index) {
-  console.log(`Индекс ${index}, значение ${number}`);
-});
-  for (let i = 0; i < orderedItems.length; i += 1) {
-    totalPrice += orderedItems[i];
-  }
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Пиши код ниже этой строки
+//   let array = [...orderedItems];
+//   array.forEach((arr) => totalPrice +=arr)
+
   
-  // Пиши код выше этой строки
-  return totalPrice;
+//   // Пиши код выше этой строки
+//   return totalPrice;
+// }
+// calculateTotalPrice([12, 85, 37, 4])
+// console.log(calculateTotalPrice([12, 85, 37, 4]));
+function filterArray(numbers, value) {
+  const filteredNumbers = [];
+  // Пиши код ниже этой строки
+  let num = [...numbers];
+  num.forEach(number => {
+    if (number > value) {
+       filteredNumbers.push(number);
+    }
+  });
+  
+  
+    // Пиши код выше этой строки
+    return filteredNumbers;
 }
-calculateTotalPrice([12, 85, 37, 4])
-console.log(calculateTotalPrice([12, 85, 37, 4]));
+  
+// filterArray([1, 2, 3, 4, 5], 3)
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+// // возвращает[4, 5].
+
+function getCommonElements(firstArray, secondArray) {
+    const commonElements = [];
+    // Пиши код ниже этой строки
+  let array1 = [...firstArray];
+  let array2 = [...secondArray];
+  array1.forEach(num => {
+     if (array2.includes(num)) {
+        commonElements.push(num);
+      }
+  })
+
+    // for (let i = 0; i < firstArray.length; i += 1) {
+    //   if (secondArray.includes(firstArray[i])) {
+    //     commonElements.push(firstArray[i]);
+    //   }
+    // }
+  
+    return commonElements;
+    // Пиши код выше этой строки
+}
+getCommonElements([1, 2, 3], [2, 4])
+console.log(getCommonElements([1, 2, 3], [2, 4]));
