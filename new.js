@@ -775,17 +775,119 @@ const planets = ['Земля', 'Марс', 'Венера', 'Юпитер'];
 // console.log(allGenres);
 // const uniqueGenres = allGenres.filter((course, index, array) => array.indexOf(course) === index);
 // console.log(uniqueGenres);
-const books = [
-  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
-  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
-  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
-  { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
-  { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
-];
-const MIN_RATING = 8;
-const AUTHOR = 'Бернард Корнуэлл';
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+//   { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+// ];
+// const MIN_RATING = 8;
+// const AUTHOR = 'Бернард Корнуэлл';
 
-const topRatedBooks = books.filter( rat => rat.rating >= MIN_RATING);
-console.log(topRatedBooks);
-const booksByAuthor = books.filter(elt => elt.author === AUTHOR);
-console.log(booksByAuthor);
+// const topRatedBooks = books.filter( rat => rat.rating >= MIN_RATING);
+// console.log(topRatedBooks);
+// const booksByAuthor = books.filter(elt => elt.author === AUTHOR);
+// console.log(booksByAuthor);
+const users = [
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male',
+    age: 23,
+  },
+  {
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    gender: 'female',
+    age: 10,
+  },
+  {
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    gender: 'male',
+    age: 1,
+  },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    gender: 'female',
+    age: 34,
+  },
+  {
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    gender: 'male'
+  },
+  {
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    gender: 'male'
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    gender: 'female'
+  }
+]
+// const getUsersWithEyeColor = (users, color) => {
+//   console.log(users);
+//   const filt = users.filter( user => user.eyeColor === color);
+  
+//   return filt;
+// };
+
+// getUsersWithEyeColor(users, 'brown');
+// console.log(getUsersWithEyeColor(users, 'brown'));
+
+
+// const getUsersWithAge = (users, minAge, maxAge) => {
+//  const user = users.filter( user => user.age >= minAge && user.age <= maxAge );
+// return user;
+// };
+// const minAge = 10;
+// const maxAge = 30;
+// getUsersWithAge(users, minAge, maxAge);
+// console.log(getUsersWithAge(users, minAge, maxAge));
+
+
+const getUsersWithFriend = (users, friendName) => {
+
+  const ur = users.filter(user => {
+    if (user.friends.flatMap() === friendName) {
+      console.log(user.friends);
+      return user;
+      
+    }
+  });
+};
+getUsersWithFriend(users, 'Briana Decker');
+console.log(getUsersWithFriend(users, 'Briana Decker'));
