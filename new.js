@@ -751,5 +751,41 @@ function changeEven(numbers, value) {
 // console.log(changeEven([1, 2, 3, 4, 5], 10));
 const planets = ['Земля', 'Марс', 'Венера', 'Юпитер'];
 // Пиши код ниже этой строки
-const planetsLengths = planets.map(planet => planet.length);
-console.log(planetsLengths);
+// const planetsLengths = planets.map(planet => planet.length);
+// console.log(planetsLengths);
+// const books = [
+//     {
+//       title: 'Последнее королевство',
+//       author: 'Бернард Корнуэлл',
+//       genres: ['приключения', 'историческое']
+//     },
+//     {
+//       title: 'На берегу спокойных вод',
+//       author: 'Роберт Шекли',
+//       genres: ['фантастика', 'мистика']
+//     },
+//     {
+//       title: 'Красна как кровь',
+//       author: 'Ли Танит',
+//       genres: ['ужасы', 'мистика', 'приключения']
+//     }
+//   ];
+  // Пиши код ниже этой строки
+// const allGenres = books.flatMap(gener => gener.genres);
+// console.log(allGenres);
+// const uniqueGenres = allGenres.filter((course, index, array) => array.indexOf(course) === index);
+// console.log(uniqueGenres);
+const books = [
+  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+  { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+  { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+];
+const MIN_RATING = 8;
+const AUTHOR = 'Бернард Корнуэлл';
+
+const topRatedBooks = books.filter( rat => rat.rating >= MIN_RATING);
+console.log(topRatedBooks);
+const booksByAuthor = books.filter(elt => elt.author === AUTHOR);
+console.log(booksByAuthor);
