@@ -879,15 +879,20 @@ const users = [
 // console.log(getUsersWithAge(users, minAge, maxAge));
 
 
-const getUsersWithFriend = (users, friendName) => {
+// const getUsersWithFriend = (users, friendName) => {
 
-  const ur = users.filter(user => {
-    if (user.friends.flatMap() === friendName) {
-      console.log(user.friends);
-      return user;
-      
-    }
-  });
+//   const ur = users.filter(user =>  user.friends.includes(friendName) );
+//   return ur;
+// };
+// getUsersWithFriend(users, 'Briana Decker');
+// console.log(getUsersWithFriend(users, 'Briana Decker'));
+const getFriends = (users) => {
+  return users.flatMap(user => user.friends).filter((friend, index, array) => array.indexOf(friend) === index);
+   
 };
-getUsersWithFriend(users, 'Briana Decker');
-console.log(getUsersWithFriend(users, 'Briana Decker'));
+
+// console.log(  getFriends(users));
+const secondArray = [17, 61, 23];
+const eachElementInSecondIsOdd = secondArray.every(x => x %2 !== 0);
+
+console.log(eachElementInSecondIsOdd);
