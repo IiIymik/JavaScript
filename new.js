@@ -892,7 +892,32 @@ const getFriends = (users) => {
 };
 
 // console.log(  getFriends(users));
-const secondArray = [17, 61, 23];
-const eachElementInSecondIsOdd = secondArray.every(x => x %2 !== 0);
+// const secondArray = [17, 61, 23];
+// const eachElementInSecondIsOdd = secondArray.every(x => x %2 !== 0);
 
-console.log(eachElementInSecondIsOdd);
+// console.log(eachElementInSecondIsOdd);
+const players = [
+  { name: 'Манго', playtime: 1270, gamesPlayed: 4 },
+  { name: 'Поли', playtime: 469, gamesPlayed: 2 },
+  { name: 'Аякс', playtime: 690, gamesPlayed: 3 },
+  { name: 'Киви', playtime: 241, gamesPlayed: 1 },
+];
+// Пиши код ниже этой строки
+
+// const totalAveragePlaytimePerGame = players.reduce((acc, curent) => {
+//   return acc + (curent.playtime / curent.gamesPlayed);
+// }, 0);
+// console.log(totalAveragePlaytimePerGame);
+// const calculateTotalBalance = users => {
+//   return users.reduce((acc, user) => {
+//     return acc + user.balance;
+//   }, 0);
+// };
+
+// console.log(calculateTotalBalance(users));
+const getTotalFriendCount = users => {
+  return users.reduce((acc, curent) => {
+    return acc + curent.friends.length;
+  },0);
+}
+console.log(getTotalFriendCount(users));
