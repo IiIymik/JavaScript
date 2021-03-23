@@ -938,9 +938,46 @@ const players = [
 
 // const sortedByDescentingRating = [...books].sort((a,b)=> b.rating-a.rating);
 
-const sortByDescendingFriendCount = users => {
-  return [...users].sort((a, b) => b.friends.localCompare(a));
+// const sortByDescendingFriendCount = users => {
+//   return [...users].sort((a, b) => b.friends.length - a.friends.length);
+// };
+
+
+// console.table(sortByDescendingFriendCount(users));
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 8.14 },
+//   { title: 'Сны В Ведьмином Доме', author: 'Говард Лавкрафт', rating: 8.67 }
+// ];
+// const MIN_BOOK_RATING = 8;
+// // Пиши код ниже этой строки
+// const names = [...books]
+//   .filter(book => book.rating > MIN_BOOK_RATING)
+//   .map(student => student.author)
+//   .sort((a, b) => a.localeCompare(b));
+// console.log(names);
+// const getNamesSortedByFriendCount = users => {
+  //  return [...users]
+  //    .flatMap(friend=>friend.friends)
+  //    .filter((value, index, array)=> array.indexOf(value)===index)
+  //    .sort((a,b)=>a.localeCompare(b))
+// // };
+// const getNamesSortedByFriendCount = users => {
+//   return [...users].sort((a, b) => a.friends.length - b.friends.length).map(user=>user.name);
+// };
+
+// console.log(getNamesSortedByFriendCount(users));
+
+const getTotalBalanceByGender = (users, gender) => {
+  const GENDER_MALE = 'male';
+const GENDER_FEMALE = 'female';
+  if (gender === GENDER_MALE) {
+  return [...users].filter(user => user.gender === GENDER_MALE).reduce((total, curent)=>{return total + curent.balance},0)
+  } else if (gender === GENDER_FEMALE) {
+  return [...users].filter(user => user.gender === GENDER_FEMALE).reduce((total, curent)=>{return total + curent.balance},0)
+}
+   
 };
-
-
-console.table(sortByDescendingFriendCount(users));
+console.log(getTotalBalanceByGender(users, 'female'));
