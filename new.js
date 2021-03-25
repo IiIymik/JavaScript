@@ -970,14 +970,56 @@ const players = [
 
 // console.log(getNamesSortedByFriendCount(users));
 
-const getTotalBalanceByGender = (users, gender) => {
-  const GENDER_MALE = 'male';
-const GENDER_FEMALE = 'female';
-  if (gender === GENDER_MALE) {
-  return [...users].filter(user => user.gender === GENDER_MALE).reduce((total, curent)=>{return total + curent.balance},0)
-  } else if (gender === GENDER_FEMALE) {
-  return [...users].filter(user => user.gender === GENDER_FEMALE).reduce((total, curent)=>{return total + curent.balance},0)
-}
+// const getTotalBalanceByGender = (users, gender) => {
+//   const GENDER_MALE = 'male';
+// const GENDER_FEMALE = 'female';
+//   if (gender === GENDER_MALE) {
+//   return [...users].filter(user => user.gender === GENDER_MALE).reduce((total, curent)=>{return total + curent.balance},0)
+//   } else if (gender === GENDER_FEMALE) {
+//   return [...users].filter(user => user.gender === GENDER_FEMALE).reduce((total, curent)=>{return total + curent.balance},0)
+// }
    
+// };
+// console.log(getTotalBalanceByGender(users, 'female'));
+
+// Setup
+var collection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
 };
-console.log(getTotalBalanceByGender(users, 'female'));
+
+// Only change code below this line
+// function updateRecords(object, id, prop, value) {
+//   if (prop !== 'tracks' && value !== "") {
+//     object[id][prop] = value;
+//   } else if (prop === "tracks" && object[id].hasOwnProperty("tracks") === false) {
+//     object[id][prop] = [value];
+//   } else if (prop === "tracks" && value !== "") {
+//     object[id][prop].push(value);
+//   } else if (value === "") {
+//     delete object[id][prop];
+//   }
+//   return object;
+// }
+
+
+// console.table(updateRecords(collection, 5439, 'artist', 'ABBA'));
+var myArray = [];
+var i = 5; 
+while (i > -1) { myArray.push(i); i--; };
+console.log(myArray);
