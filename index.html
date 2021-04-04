@@ -8,6 +8,25 @@
   </head>
   <body>
     <a href="./html/first.html"></a>
+    <div id="container">
+      <form>
+        <label>Логин</label>
+        <input id="login" style="display: block" autocomplete="off" />
+        <div id="loginInfo" style="display: none">Минимум 4 символа</div>
+        <label>Пароль</label>
+        <input id="password" type="password" style="display: block" />
+        <div id="passwordInfo" style="display: none">От 8-30 символов</div>
+        <label for="agree"
+          >Я ознакомил(ся/ась) с правилами обработки персональных данных</label
+        >
+        <input id="checkBox" type="checkbox" name="agree" />
+        <button type="submit" id="submitButton" style="display: block">
+          Войти
+        </button>
+        <div id="msgBox"></div>
+      </form>
+    </div>
+    <script src="./first.js" type="module"></script>
     <!-- <script src="./exercises.js" type="module"></script> -->
     <!-- <script src="./new.js" type="module"></script> -->
   </body>
