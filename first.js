@@ -83,18 +83,29 @@
 //     msgBox.innerHTML = "Авторизация прошла успешно!";
 //   }
 // });
-function findOdd(A) {
-  let num = null;
-  const result = A.reduce(function(acc, el) {
-    acc[el] = (acc[el] || 0) + 1;
-    return acc;
-  }, {});
- for (const key in result) {
-   if (result[key] % 2 !== 0) {
-    return num = key;
-  } 
- }
-  return num;
+// function findOdd(A) {
+//   let num = null;
+//   const result = A.reduce(function(acc, el) {
+//     acc[el] = (acc[el] || 0) + 1;
+//     return acc;
+//   }, {});
+//  for (const key in result) {
+//    if (result[key] % 2 !== 0) {
+//     return num = key;
+//   } 
+//  }
+//   return num;
+// }
+//   console.log(findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5]))
+
+// function digitize(n) {
+//   return Array.from(String(n), Number).reverse();
+// }
+
+// console.log(digitize(35231))
+
+function basicOp(operation, value1, value2){
+  return eval(value1+operation+value2);// Code
 }
 
-  console.log(findOdd([20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5]))
+console.log(basicOp('+', 4, 7));
