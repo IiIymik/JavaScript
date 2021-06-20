@@ -104,8 +104,16 @@
 
 // console.log(digitize(35231))
 
-function basicOp(operation, value1, value2){
-  return eval(value1+operation+value2);// Code
-}
+// function basicOp(operation, value1, value2){
+//   return eval(value1+operation+value2);// Code
+// }
 
-console.log(basicOp('+', 4, 7));
+// console.log(basicOp('+', 4, 7));
+const fn = arr => arr.map(el => {
+  const item = document.createElement('div');
+  item.textContent = el;
+
+  return item;
+ });
+
+console.log(fn(['html', 'css', 'js', 'react']));
